@@ -1,0 +1,14 @@
+#!/bin/dash
+
+x=$(cat /sys/class/backlight/toshiba/brightness)
+
+if [ "$1" = "down" ]; then
+    if [ $x -gt 1 ]; then
+	x=$((x-1))
+    fi
+else
+    if [ $x -lt 8 ]; then
+        x=$((x+1))
+    fi
+fi
+echo "$x" > /sys/class/backlight/toshiba/brightness

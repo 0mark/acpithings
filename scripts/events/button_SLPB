@@ -1,0 +1,2 @@
+event=button.*(SLPB|SBTN).*
+action=/opt/bin/suspend.sh mem
