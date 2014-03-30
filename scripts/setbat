@@ -1,8 +1,8 @@
 #!/bin/sh
 
 sct=$(cat /sys/devices/platform/smapi/BAT0/start_charge_thresh)
-if [ "$sct" -lt 80 ]; then
-    echo 80 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
+if [ "$sct" -lt 81 ]; then
+    echo 81 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
     echo 95 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
 else
     echo 60 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
