@@ -1,16 +1,16 @@
 #!/bin/sh
 
 function susprep {
-    which nvidia-disable.sh &> /dev/null && nvidia-disable.sh
+    logger -t suspend "sleeping down"
     for A in $(ls /media/); do pumount $A; done;
-    killall ssh
     netcfg -a
     sync
 }
 
 function suspres {
-    killall -s SIGHUP srandrd
-    echo resume
+    logger -t suspend "waking up"
+    netcfg-auto
+    logger -t suspend "woken up"
 }
 
 susprep
