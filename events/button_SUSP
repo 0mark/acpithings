@@ -1,2 +1,2 @@
 event=button.*(SUSP).*
-action=/opt/bin/suspend.sh disk
+action=PREFIX/bin/suspto disk

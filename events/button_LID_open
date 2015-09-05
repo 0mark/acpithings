@@ -1,2 +1,2 @@
 event=button.*(LID).*open
-action=/opt/bin/sitnol.sh open
+action=PREFIX/bin/sitnol open

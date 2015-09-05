@@ -1,2 +1,2 @@
 event=button.*(LID).*close
-action=/opt/bin/sitnol.sh close
+action=PREFIX/bin/sitnol close
