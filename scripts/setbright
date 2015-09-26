@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#source ETCPREFIX/acpithings.rc
-source /etc/acpithings.rc
+source ETCPREFIX/acpithings.rc
 
 max=$(cat $BRIGHT_PATH/max_brightness)
 step=$(($max/$BRIGHT_STEPS))

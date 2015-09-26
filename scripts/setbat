@@ -1,11 +1,13 @@
 #!/bin/sh
 
+source ETCPREFIX/acpithings.rc
+
 sct=$(cat /sys/devices/platform/smapi/BAT0/start_charge_thresh)
 
 if [ "$sct" -lt 81 ]; then
-    echo 81 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
-    echo 95 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
+    echo $CHARGE_START_HIGH > /sys/devices/platform/smapi/BAT0/start_charge_thresh
+    echo $CHARGE_END_HIGH > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
 else
-    echo 60 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
-    echo 80 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
+    echo $CHARGE_START_LOW > /sys/devices/platform/smapi/BAT0/start_charge_thresh
+    echo $CHARGE_END_LOW > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
 fi

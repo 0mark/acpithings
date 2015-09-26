@@ -1,2 +1,2 @@
 event=video.*BRTUP.*
-action=/opt/bin/setbright up
+action=PREFIX/bin/setbright up

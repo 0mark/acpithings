@@ -1,2 +1,2 @@
 event=video.*BRTDN.*
-action=/opt/bin/setbright down
+action=PREFIX/bin/setbright down

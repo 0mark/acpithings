@@ -1,2 +1,2 @@
-event=battery.*(CPU[0-9]+).*
-action=
+event=battery.*(PNP[A-Z0-9]+).*
+action=PREFIX/bin/action_BAT

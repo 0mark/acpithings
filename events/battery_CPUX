@@ -1,2 +1,2 @@
-event=battery.*(PNP[0-9A-F]+:[0-9]).*
+event=battery.*(CPU[0-9A-F]+:[0-9]).*
 action=
