@@ -1,15 +1,23 @@
-#!/bin/sh
+#!/bin/bash
+
+source ETCPREFIX/acpithings.rc
 
 function susprep {
     logger -t suspend "sleeping down"
     for A in $(ls /media/); do pumount $A; done;
-    netcfg -a
+    $NET_DOWN
     sync
+    logger -t suspend "sleeping now"
 }
 
 function suspres {
     logger -t suspend "waking up"
-    netcfg-auto
+    $NET_UP
+    if [ "$(</sys/class/power_supply/AC/online)" -ne 1 ]; then
+        powerdown
+    else
+        powerup
+    fi
     logger -t suspend "woken up"
 }
 

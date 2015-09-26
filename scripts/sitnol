@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 uids="$(cat /etc/passwd | egrep ":x:[0-9]{4,}" | cut -d ":" -f 3 | tr "\n" " ")"
 #pids="$(ps U "${uids:0:-1}" -o pid | tr "\n" " ")"
