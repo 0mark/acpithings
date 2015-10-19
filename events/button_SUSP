@@ -1,2 +1,2 @@
 event=button.*(SUSP).*
-action=PREFIX/bin/suspto disk
+action=PREFIX/sbin/suspto disk

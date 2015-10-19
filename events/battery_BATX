@@ -1,2 +1,2 @@
 event=battery.*(BAT[0-9]+).*
-action=PREFIX/bin/act_bat
+action=PREFIX/sbin/act_bat

@@ -2,6 +2,8 @@
 
 source ETCPREFIX/acpithings.rc
 
+# TODO multiple batteries
+
 sct=$(cat /sys/devices/platform/smapi/BAT0/start_charge_thresh)
 
 if [ "$sct" -lt 81 ]; then

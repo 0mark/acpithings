@@ -1,2 +1,2 @@
 event=button.*(SLPB|SBTN).*
-action=PREFIX/bin/suspto mem
+action=PREFIX/sbin/suspto mem
