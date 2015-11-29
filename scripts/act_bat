@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#source ETCPREFIX/acpithings.rc
+
 ac="$(</sys/class/power_supply/AC/online)"
 
 if [ "$ac" -eq 0 ]; then
